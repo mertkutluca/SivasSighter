@@ -9,8 +9,17 @@ import Foundation
 
 public struct Sight {
     let title: String
-    let imageUrl: URL
-    let mediaUrl: URL
+    let imageUrl: String
+    let mediaUrl: String
+}
+
+extension Sight {
+    public static func dummy(number: Int) -> Sight {
+        let numberString = String(number)
+        return Sight(title: "title" + numberString,
+                     imageUrl: "image" + numberString,
+                     mediaUrl: "media" + numberString)
+    }
 }
 
 extension Sight: Equatable {
