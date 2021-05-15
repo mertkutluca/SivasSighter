@@ -14,9 +14,8 @@ final class AppRouter {
     func start(window: UIWindow) {
         mainWindow = window
         // Has to crash if window not exist
-        let vc = UIViewController()
-        vc.view.backgroundColor = .red
-        let nc = UINavigationController(rootViewController: vc)
+        let hvc = HomeBuilder.build()
+        let nc = UINavigationController(rootViewController: hvc)
         mainWindow!.rootViewController = nc
         mainWindow!.makeKeyAndVisible()
     }
