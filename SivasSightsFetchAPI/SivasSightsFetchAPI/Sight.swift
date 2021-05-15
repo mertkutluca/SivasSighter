@@ -8,9 +8,9 @@
 import Foundation
 
 public struct Sight {
-    let title: String
-    let imageUrl: String
-    let mediaUrl: String
+    public let title: String
+    public let imageUrl: String?
+    public let mediaUrl: String?
 }
 
 extension Sight {
@@ -19,6 +19,12 @@ extension Sight {
         return Sight(title: "title" + numberString,
                      imageUrl: "image" + numberString,
                      mediaUrl: "media" + numberString)
+    }
+    
+    public static func example() -> Sight {
+        return Sight(title: "Kent Meydanı Şehir Kamerası",
+                     imageUrl: "https://www.sivas.bel.tr/AjaxResize.ashx?file=Files/spotlar/kentmeydani.jpg&width=190",
+                     mediaUrl: nil)
     }
 }
 

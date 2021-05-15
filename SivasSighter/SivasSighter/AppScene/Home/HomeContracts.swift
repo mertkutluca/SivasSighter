@@ -38,7 +38,7 @@ enum HomePresenterOutput: Equatable {
 
 
 // MARK: - View Controller
-protocol HomeViewControllerProtocol {
+protocol HomeViewControllerProtocol: class {
     func handle(output: HomePresenterOutput)
 }
 

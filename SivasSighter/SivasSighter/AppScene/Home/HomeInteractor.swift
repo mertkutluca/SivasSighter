@@ -15,10 +15,10 @@ final class HomeInteractor: HomeInteractorProtocol {
     func start() {
         delegate?.handle(output: .setLoading(true))
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.delegate?.handle(output: .setLoading(false))
             self.sights = [
-                Sight.dummy(number: 1),
-                Sight.dummy(number: 2),
-                Sight.dummy(number: 3),
+                Sight.example(),
+                Sight.example(),
             ]
             self.delegate?.handle(output: .displayHome(self.sights))
         }
