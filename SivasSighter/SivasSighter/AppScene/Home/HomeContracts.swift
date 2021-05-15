@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SivasSightsFetchAPI
 
 // MARK: - Interactor
 protocol HomeInteractorProtocol: class {
@@ -16,6 +17,7 @@ protocol HomeInteractorProtocol: class {
 
 enum HomeInteractorOutput: Equatable {
     case setLoading(Bool)
+    case displayHome([Sight])
 }
 
 protocol HomeInteractorDelegate: class {
@@ -31,6 +33,7 @@ protocol HomePresenterProtocol: class {
 enum HomePresenterOutput: Equatable {
     case setLoading(Bool)
     case updateTitle(String)
+    case displayHome([Sight])
 }
 
 

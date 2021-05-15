@@ -4,4 +4,7 @@
    <FileRef
       location = "group:SivasSighter/SivasSighter.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:SivasSightsFetchAPI/SivasSightsFetchAPI.xcodeproj">
+   </FileRef>
 </Workspace>
